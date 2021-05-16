@@ -1,7 +1,9 @@
 #[cfg(test)]
 mod test;
 
-pub struct Spongemock {
+mod core;
+
+pub struct Config {
     /// The chance of the first letter being in uppercase
     pub first_upper: f64,
 
@@ -16,9 +18,11 @@ pub struct Spongemock {
 
     /// The chance of a character to be uppercase, if the previous two characters are lowercase
     pub lower_lower_to_upper: f64,
+    // /// The random number generator
+    // rng: ThreadRng,
 }
 
-impl Default for Spongemock {
+impl Default for Config {
     fn default() -> Self {
         Self {
             first_upper: 0.5,
@@ -26,15 +30,17 @@ impl Default for Spongemock {
             upper_to_lower: 0.5,
             upper_upper_to_lower: 0.75,
             lower_lower_to_upper: 0.75,
+            // rng: rand::thread_rng(),
         }
     }
 }
 
-impl Spongemock {
-    pub fn transform_str<T>(&self, s: T)
-    where
-        T: Into<String>,
-    {
-        let s = s.into();
+pub trait Spongemock {
+    /// Transform a mutable Self reference according to the set parameters in the specified options
+    fn mock(&mut self, config: &Config);
+
+    /// Use the default configuration for the mock implementation
+    fn mock_default(&mut self) {
+        self.mock(&Config::default())
     }
 }

@@ -28,3 +28,4 @@ path = "src/bin/main.rs"
 # TODO Split dependencies of the library and the CLI app into separate lists, once cargo #1982 is ready
 [dependencies]
 clap = "2.33.3"
+rand = "0.8.3"
