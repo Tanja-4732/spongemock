@@ -3,7 +3,7 @@
 
 [package]
 name = "spongemock"
-version = "0.0.1"
+version = "0.1.0"
 authors = ["Bernd-L <git@bernd.pw>"]
 edition = "2018"
 
