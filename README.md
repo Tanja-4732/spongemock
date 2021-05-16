@@ -1,6 +1,6 @@
 # Spongemock
 
-[![dependency status](https://deps.rs/crate/spongemock/0.0.0/status.svg)](https://deps.rs/crate/spongemock/0.0.0)
+[![dependency status](https://deps.rs/crate/spongemock/0.0.1/status.svg)](https://deps.rs/crate/spongemock/0.0.1)
 
 A Rust library and CLI-tool for random text capitalization  
 (work in progress)
