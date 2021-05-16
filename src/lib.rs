@@ -5,6 +5,7 @@ mod test;
 
 mod core;
 
+#[derive(Debug)]
 pub struct Config {
     /// The chance of the first letter being in uppercase
     pub first_upper: f64,
