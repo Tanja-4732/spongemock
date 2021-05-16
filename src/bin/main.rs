@@ -1,3 +1,5 @@
+#![warn(clippy::pedantic)]
+
 use spongemock::{Config, Spongemock};
 
 fn main() {
