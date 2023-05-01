@@ -8,6 +8,7 @@ pub struct CliOptions {
     pub text: String,
     pub config: Config,
     pub no_newline: bool,
+    pub quiet: bool,
 }
 
 pub fn configure_parser() -> App<'static, 'static> {
@@ -51,6 +52,11 @@ pub fn configure_parser() -> App<'static, 'static> {
                 .short("L")
                 .long("lower-lower-to-upper")
                 .value_name("0..1"),
+                Arg::with_name("no-quiet")
+                .takes_value(false)
+                .help("suppress author and license notice")
+                .short("q")
+                .long("no-quiet"),
             Arg::with_name("no_newline")
                 .takes_value(false)
                 .help("If the newline should be suppressed")
@@ -93,5 +99,6 @@ pub fn get_options(matches: &ArgMatches) -> Result<CliOptions, anyhow::Error> {
                 .map(parse)
                 .unwrap_or(Ok(Config::default().lower_lower_to_upper))?,
         },
+        quiet: matches.is_present("no-quiet"),
     })
 }

@@ -10,8 +10,10 @@ fn main() -> Result<(), anyhow::Error> {
     let matches = cli::configure_parser().get_matches();
 
     // Print the name and version of the application along its license notice
-    eprintln!("{} {}", constants::NAME, constants::VERSION);
-    eprintln!("{}\n", constants::LICENSE);
+    if matches.is_present("no-quiet") {
+        eprintln!("{} {}", constants::NAME, constants::VERSION);
+        eprintln!("{}\n", constants::LICENSE);
+    }
 
     // Try to extract the desired configuration from the arg-matches
     let mut cli_options = cli::get_options(&matches)?;
