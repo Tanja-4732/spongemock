@@ -11,7 +11,7 @@ The name of this library (and the CLI application) is derived from a meme with t
 
 ## Licence & Copyright
 
-Copyright (c) 2021 Bernd-L. All rights reserved.
+Copyright (c) 2021 Tanja-4732. All rights reserved.
 
 ![AGPL v3: Free as in Freedom](https://www.gnu.org/graphics/agplv3-with-text-162x68.png)
 

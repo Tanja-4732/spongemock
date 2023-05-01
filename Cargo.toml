@@ -4,12 +4,12 @@
 [package]
 name = "spongemock"
 version = "0.1.0"
-authors = ["Bernd-L <git@bernd.pw>"]
+authors = ["Tanja <git@tanja.pw>"]
 edition = "2018"
 
 license = "AGPL-3.0-or-later"
-repository = "https://github.com/Bernd-L/spongemock"
-homepage = "https://github.com/Bernd-L/spongemock#readme"
+repository = "https://github.com/Tanja-4732/spongemock"
+homepage = "https://github.com/Tanja-4732/spongemock#readme"
 readme = "README.md"
 documentation = "https://docs.rs/spongemock"
 description = "A library and CLI-tool for random text capitalization"
