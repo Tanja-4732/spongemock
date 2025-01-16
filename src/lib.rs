@@ -44,6 +44,6 @@ pub trait Spongemock {
 
     /// Use the default configuration for the mock implementation
     fn mock_default(&mut self) {
-        self.mock(&Config::default())
+        self.mock(&Config::default());
     }
 }
