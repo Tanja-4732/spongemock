@@ -5,7 +5,7 @@
 name = "spongemock"
 version = "0.1.1"
 authors = ["Tanja <rust@tanja.pw>"]
-edition = "2018"
+edition = "2021"
 
 license = "AGPL-3.0-or-later"
 repository = "https://github.com/Tanja-4732/spongemock"
